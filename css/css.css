@@ -1,0 +1,137 @@
+
+#demo {
+    background: #FFF;
+    overflow:hidden;
+    width:100%;
+}
+#demo img {
+    border: 3px solid #F2F2F2;
+}
+#indemo {
+    float: left;
+    width: 800%;
+}
+#demo1 {
+    float: left;
+}
+#demo2 {
+    float: left;
+}
+.row .b1{
+    width: 175px;
+    height: 200px;
+    border-radius: 10px;
+    border: 3px #ccc solid;
+    margin: 10px 0;
+}
+#foot {
+    width: 100%;
+    background:url(../images/foot.jpg) no-repeat;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    background-size:cover;
+}
+#footb {
+    width: 100%;
+    background: #202020;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    background-size:cover;
+}
+
+#foot  li {
+    list-style: none;
+}
+#foot  li.text-left a {
+    padding: 0 13px;
+}
+.swiper-container1 {
+    height: 20px;
+    overflow: hidden;
+    font-size: 16px;
+    color:#d43f3a;
+}
+.swiper-container2 {
+    height: 40px;
+    overflow: hidden;
+    font-size: 16px;
+    color:#d43f3a;
+}
+body a:hover {
+    color: #D40000;
+    text-decoration: none;
+}
+a{
+    color: #8d8884;
+
+}
+.jqstooltip { width: auto !important; height: auto !important; position: absolute;left: 0px;top: 0px;visibility: hidden;background: #000000;color: white;font-size: 11px;text-align: left;white-space: nowrap;padding: 5px;z-index: 10000;}
+.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}
+
+
+#onepageClient2 {
+    width: 100%;
+
+    background: url(../images/k15.jpg) no-repeat;
+    margin: 50px auto 50px auto;
+    background-position: center 0px;
+    background-size: cover;
+}
+.headSwxt {
+    background: url(../images/xt1.jpg) no-repeat;
+    background-position: center;
+    height: 750px;
+
+    clear: both;
+    background-size: cover;
+}
+.w .x {
+    position:relative;
+
+}
+.w .x .fa .s {
+    filter: alpha(opacity=50); /* IE的透明度 */
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100; /* 此处的图层要大于页面 */
+    background: rgba(0,0,0,0.3);
+}
+
+.w .x .fa .s img {
+
+}
+.w .x .fa:hover .s {
+    display:block
+}
+#bottom-bar .wf-td p fa fa-weixin{
+    display: none;
+}
+.tab-content{
+    line-height: 35px;
+}
+.menu .nav > li{
+    float: left;
+}
+.tf{
+    position: absolute; height: 27px; line-height: 20px; width: 91%; color: #fff;
+}
+.good{
+    background-image: url("../images/meta_good.png");
+    background-repeat: no-repeat;
+    background-position:4px;
+    padding-left: 20px;
+    float: right;
+}
+.view{
+    background-image: url("../images/meta_view.png");
+    background-repeat: no-repeat;
+    background-position: 4px;
+    float: left;
+    padding-left: 20px;
+}
+.row .w .x .tf a{    color:#0C0B0B;
+    font-size: 12px;
+}
+.dropdown-menu{ margin: 0 -72px;}

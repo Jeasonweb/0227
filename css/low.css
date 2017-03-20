@@ -1,0 +1,214 @@
+body{ padding:0; margin:0}
+#header .line{ background:#0088CC; height:3px; clear:both}
+#header .tools{ height:40px; background:#F0F0ED}
+#header .tools ul{ padding-top:12px; margin: auto;  }
+#header .tools ul li{font-size: 11px;padding: 0 15px;text-transform: uppercase;border-left: 1px solid #ccc;width: 100px; float:right; list-style:none; position: relative; cursor: pointer}
+#header .tools ul li.tel{ width: 47%; float: left;}
+#header .tools ul li:last-child{ border:none}
+#header .tools ul li a{line-height:19px; }
+#header .tools ul li:hover ul{ display: block}
+#header .tools ul li ul{ display: none; position: absolute; width: 100px; background: #F0F0ED; left: 0px; z-index:999999999999;}
+#header .tools ul li ul li{ float: left; border-left:none; text-align: center;  }
+#header .tools ul li ul li a{ display: block;line-height: 28px; text-align: left}
+
+#header .header-container{}
+#header .header-container .logo{ float:left; padding:12px;}
+#header .header-container .contact{ float:right; height:110px; line-height:50px; padding-top:35px}
+
+#header .menu{ font-weight:600; padding:0; float: right; }
+#header .menu ul{ padding:0}
+body li:hover{background:none;transition: background 0.5s,border 0.3s; -moz-transition: background 0.5s,border 0.3s;	/* Firefox 4 */  -webkit-transition: background 0.5s,border 0.3s;	/* Safari 和 Chrome */  -o-transition: background 0.5s,border 0.3s}
+
+#header .menu ul li:hover{color:#fff; border-bottom: 3px solid #0088CC; background: #eee;}
+#header .menu ul li.selected{  color:#fff}
+#header .menu ul li ul{ display:none}
+#header .menu ul li:hover ul{ display:block;}
+#header .menu ul li:hover ul li{ border-bottom:none; }
+/*#header .menu{ background:#F0F0ED; height:40px; clear:both; border-radius:4px 4px;font-weight:600; padding:0}*/
+
+#banner{ height:480px;  overflow:hidden; clear: both}
+#main-container{ width:1140px; margin:10px auto auto auto}
+/*** 公共 ***/
+.image_title{  clear:both; border-bottom:3px #70BCE6 solid; height:50px;}
+.image_title h3{font-size:22px;color:#70BCE6;line-height:50px;}
+.f_title{ font-size:26px; color:#4B4B4B; line-height:46px;}
+.s_title{ font-size:16px; color:#828282; line-height:36px;}
+.title{ clear:both}
+.brand_title{ position:absolute; top:40px; left:50px; border-radius:20px; border:4px #fff solid; width:320px; height:130px;}
+.brand_title h1{ color:#FFF;  font-size:55px; text-align:center; line-height:130px; }
+.brand_title_en{ position:absolute; top:80px; bottom:10px; right:-10px;width:360px; height:150px; line-height:80px;}
+.brand_title_en h2{ color:#fff; font-size:70px;}
+.brand_title_en h3{ color:#fff; font-size:25px;}
+
+/*** 品牌建设 ***/
+.jjfa{height:330px; width:100%; position:relative; background:#70BCE6; }
+.jjfa .man{ position:absolute; top:0px; left:220px;}
+.left{float:left; }
+.right{float:right; }
+.company_image{ position:relative}
+.company_image .txt{ width:420px; height:350px;margin:40px 60px 10px 60px; padding-top:10px;}
+.company_image .image{ width: 420px; height:350px; margin:40px 60px; position:relative }
+.company_image .image .overlap{ position:absolute; left:0; top:0; width:430px; height:350px;}
+.app li{ float:left; margin:0px 16px; height:24px; list-style-type:disc}
+
+/*** 营销 ***/
+.postion_absolute{ position:absolute}
+.postion_relative{ position:relative}
+.yx_cm{ position:absolute; left:10px; top:100px; left:20px;}
+.yx_pc{ position:absolute; left:10px; top:340px; left:340px;}
+.yx_pad{ position:absolute; left:10px; top:330px; left:670px;}
+.yx_mb{ position:absolute; left:10px; top:420px; left:900px;}
+
+
+.share_box{ width:145px; height:145px; border:#ccc solid 2px; margin:20px; padding-top:10px; border-radius:20px; float:left; font-size:22px; text-align:center}
+.share_box img{ width:90px;} 
+
+
+/*** 标签云 ***/
+.scan{ text-align:center}
+#tagbox{position:absolute;margin:20px 30px;width:440px;height:380px; top:-20px;}
+#tagbox a{position:absolute;padding:3px 6px;font-family:Microsoft YaHei;color:#80C567;TOP:0px;font-weight:bold;text-decoration:none;left:0px}
+
+
+/*** 金字塔 ***/
+ul.jzt{ width:300px; position:absolute; top:360px;}
+ul.jzt li{ float:left; color:#666; font-size:20px; margin-left:60px; white-space:8px;}
+.success{ position:absolute; top:160px; right:310px;}
+
+.paper{ position:absolute; top:90px; left:130px;}
+.paper img{ width:140px; height:210px;}
+
+.pano_view{ position:absolute; top:100px; left:310px;  border-radius:100px; width:200px; height:200px;}
+.pano_text{ position:absolute; top:105px; left:310px; width:200px; height:200px;  text-align: center; padding-top:60px;}
+.pano_text h2{ color:#fff; font-size:35px; line-height:20px;}
+.pano_text h3{ color:#fff; font-size:26px; line-height:80px;}
+
+/*** 品牌建设 ***/
+.xsqd{height:370px; width:100%; position:relative; background:#C1C1C1; clear:both; margin:20px auto }
+.xsqd .xsqd_txt{ background:#70BCE6; height:370px; }
+.xsqd .brand_title{ position:absolute; top:40px; left:50px; border-radius:20px; border:4px #fff solid; width:360px; height:150px;}
+.xsqd .brand_title h1{ color:#FFF;  font-size:60px; text-align:center; line-height:150px; }
+
+.bar{ background:url(../images/jjfa3/line-bar.png); width:100%; height:260px;}
+
+
+#product{}
+#product .icon{ width:180px; height:225px; float:left; margin:10px 45px; text-align:center; font-size:20px;}
+#product .title{ background:url(../images/product/title_bg.png); width:1140px; height:60px; clear:both; margin-top:30px; margin-bottom:30px; }
+#product .title h3{ color:#fff; font-size:22px;line-height:50px; text-indent:1em;}
+#product .radius{ width:220px; height:220px; background:#75B7D7; border-radius:110px; opacity:0.7;transition:rotate 1s;-moz-transition:rotate 1s; -webkit-transition:rotate 1s;
+-o-transition:rotate 1s; }
+
+#product .radius:hover{transform: rotate(360deg);}
+#product .no_bg{ border:10px solid #75B7D7; background:none; padding-top:60px;}
+#product .no_bg h1{ color:#fff; font-size:30px; text-align:center; color:#666;}
+#product .radius p{ font-size:25px; color:#fff; padding:30px; padding-top:80px; text-align:center}
+
+#product .advantages{ width:270px; position:absolute; left:120px; top:360px;}
+#product .advantages_tip{ width:270px; position:absolute; left:120px; top:60px;}
+#product .advantages_tip h3{ color:#666; font-size:18px;}
+#product .advantages_tip img{ float:right}
+#product .advantages li{ background:#CCC; margin:10px; height:35px; line-height:35px; font-size:18px;}
+
+#product .process{ width:100%; height:330px; padding-top:10px;}
+#product .process .box{ width: 310px; float:left; height:330px; text-align:center; position:relative}
+#product .process .arrow{ float:left; height:230px; padding-top:100px; width:80px; text-align:center}
+#product .process .box p{ font-size:26px; position:absolute; bottom:0px; text-align:center; width:100%;}
+
+#product .tools{ width:100%; height:310px; padding-top:10px;}
+#product .tools .box{ width: 230px; float:left; text-align:center; margin:20px 75px; height:240px;}
+#product .tools .arrow{ float:left; height:230px; padding-top:100px; width:80px; text-align:center}
+#product .tools .box p{ font-size:20px;}
+
+.article_list ul{ padding-left:30px; padding-top:20px;}
+.article_list ul li{ color:#948A88; font-size:18px; height:35px; line-height:35px;}
+
+#school .icon{ width:170px; height:230px; float:left; margin:20px 55px; text-align:center; font-size:20px; line-height:20px;}
+#school .icon img{ width:170px; height:170px;}
+#school h1{ font-size:20px;padding:10px 60px;line-height:30px;}
+#school h3{ font-size:17px; padding:10px 60px; color:#666; line-height:30px;}
+#school .icon h2{ font-size:18px; color:#333; line-height:24px;}
+#school .icon hr{ line-height:6px; height:6px; margin:5px 2px; padding:0}
+#school .icon p{ color:#999; font-size:14px;}
+#school .five_day{ width:100%; clear:both; padding:60px 80px;}
+#school .five_day h1{ color:#75b7d7; font-size:40px;line-height:52px; padding:0}
+#school .five_day h2{ color:#ccc; font-size:22px; line-height:46px;}
+#school .five_day ul{ margin-top:20px;}
+#school .five_day ul li{ font-size:16px; line-height:32px; height:32px; }
+#school .five_day ul li a{ color:#666}
+
+#school .flight .title h3{ line-height:52px;}
+#school .flight .title .en{ font-size:20px;}
+#school .flight .title .ch{ font-size:48px; color:#6bc2e7}
+
+#school .flight .photo{ width:1140px; height:380px; overflow:hidden}
+#school .flight p{ font-size:16px; line-height:30px; text-indent:2em;}
+.school_bar{ background:none; height:280px; overflow:hidden}
+.school_bar h3{ text-indent:20em; padding-top:110px; line-height:30px; font-size:20px;}
+.school_bar h4{ text-indent:35em; line-height:30px;font-size:14px;}
+.school_question{ width:1140px; margin:auto}
+.school_question ul{ padding:20px 60px; }
+.school_question ul li{ height:35px; line-height:35px; font-size:18px;}
+
+#knowledge .title{ background:url(../images/product/title_bg.png); width:1140px; height:60px; clear:both; margin-top:30px; }
+#knowledge .title h3{ color:#fff; font-size:22px;line-height:50px; text-indent:1em;}
+#knowledge .icon{ text-align:center; font-size:20px; line-height:20px;}
+#knowledge .icon img{ width:170px; height:170px; float:left}
+#knowledge .icon .txt{ font-size:18px; color:#333; line-height:30px; float:left; width:220px; height:170px; margin-top:30px; margin-left:30px}
+
+#knowledge .demand{ margin:30px;}
+#knowledge .demand li{ height:100px;}
+#knowledge .demand li h3{ font-size:16px; line-height:40px;}
+#knowledge .demand li img{ float:left; margin-right:10px;}
+#knowledge .demand li p{ font-size:13px; color:#ccc}
+#knowledge .demand li span.author{ font-size:14px; color:#666}
+
+#knowledge .activity .pic{ width:380px; height:190px;text-align:center; float:left; position:relative}
+#knowledge .activity .pic img{ margin:20px 10px 10px auto; width:260px; height:130px; cursor:pointer}
+#knowledge .activity .pic h3{ font-size:14px;}
+#knowledge .activity .pic .zoom{ display:none; position:absolute; top:20px; left:55px; background:#333; height:130px; width:260px; background-image:url(../images/zoom.png); background-repeat: no-repeat; background-position:center; opacity:0.6;filter:alpha(opacity=60); cursor:pointer }
+#knowledge .activity .pic:hover .zoom{ display:block}
+
+.Solution .plus{ float:left; width:30px; padding:60px 5px; }
+.Solution .icon{ width:150px; height:150px; float:left; font-size:18px; line-height:30px; font-size:30px; border-radius:75px;color:#FFF; line-height:38px; text-align:center; padding:35px 38px;}
+.Solution .y{ background:#F1B864 }
+.Solution .h{ background:#B3B641 }
+.Solution .b{ background:#62C2C9;padding:35px 28px; }
+.Solution .r{ border:3px #E21A13 solid; color:#E21A13; line-height:65px;}
+
+.scene{ margin-top:60px; clear:both}
+.friend img{float:left; width:150px; height:70px;}
+.scene div{ text-align:center}
+.scene h1{ font-size:32px; text-align:center; line-height:120px;}
+.scene h2{ font-size:17px; line-height:70px;}
+.scene h3{ font-size:14px; text-align:center; color:#999; padding:5px 80px; line-height:30px;}
+.scene .app_scene{ width:220px; height:220px; float:left; border-radius:10px; border:3px #ccc solid; text-align:center; margin:20px 30px; padding-top:10px}
+.scene .app_scene h1{ font-size:18px; line-height:48px;}
+.scene .qrcode{ padding-top:25px;}
+.scene .qrcode h1{ font-size:18px; line-height:35px; text-align:center}
+
+.icon img{cursor:pointer;transition:width 2s, height 1s;-moz-transition:width 2s, height 2s, -moz-transform 1s;-webkit-transition:width 2s, height 2s, -webkit-transform 1s; -o-transition:width 2s, height 2s, -o-transform 1s;}
+.icon:hover img{transform:rotate(20deg);-moz-transform:rotate(20deg);-webkit-transform:rotate(20deg);-o-transform:rotate(20deg);}
+
+.advantages li{cursor:pointer; transition:padding-left 1s;}
+.advantages li:hover {padding-left:1.5em}
+
+
+#foot a {color:#8d8884;}
+#foot ul {width:1140px; margin:0 auto; color:#8d8884;}
+#foot ul li {padding-left:50px; line-height:24px;}
+#foot ul li.nav {padding-left:37px; margin-bottom:10px;}
+#foot ul li.nav a {padding:0 13px;}
+#foot ul li.tel {color:#be8419; font-size:26px; line-height:30px; font-weight:bold; }
+
+/***友情连接滚动**/
+.scrollbox{position:relative;width:850px;height:146px;overflow:hidden;}
+.scrollbox ul{position:absolute;left:0px;top:0px;}
+.scrollbox li{float:left;width:670px;height:63px;overflow:hidden;}
+.scrollbox li a{float:left;display:inline-block;width:156px;height:63px;overflow:hidden;margin-left:10px;}
+.scrollbox li a img{display:block;width:150px;height:70px;}
+
+#leftlist{width:999em;}
+/* fontlist */
+#fontlist li{height:22px;line-height:22px;}
+#fontlist li a{width:auto;}

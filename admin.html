@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>视维全景</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/low.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/css.css">
+    <script src="jq/jquery-1.11.3.js"></script>
+    <script src="jq/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="jq/jquery-1.8.3.min.js.js"></script>
+    <script type="text/javascript" src="jq/jquery.DB_tabMotionBanner.min.js.js"></script>
+    <script src="js/swiper.jquery.min.js"></script>
+    <style>
+        #lunbo{display: none;padding: 0;}
+        .img-responsive{margin: auto}
+        @media only screen and (max-width: 768px) {
+         #banner{display: none}
+            #lunbo{  display:block;}
+        }
+        @media only screen and (max-width: 768px) {
+            .dropdown-menu{margin: 0}
+        }
+        @media only screen and (max-width: 400px) {
+            #header .tools ul li{width:85px;padding:0 8px;}
+            h3{font-size: 20px;}
+            .row .b1{width: 160px;}
+        }
+        #navbar1 ul li:hover{
+            color:#fff;
+            border-bottom:3px solid #0088CC;
+            background: #eee;
+        }
+    </style>
+</head>
+<body>
+<div id="header" style="z-index:99;background: #fff;width: 100%; top: 0;box-shadow: 0px 0px 5px #888;">
+    <div class="line"></div>
+    <div class="tools">
+        <ul class="container">
+            <li class="tel">客服热线：4007-111-788</li>
+            <li><a href=""><i class="glyphicon glyphicon-lock"></i> 请先登录</a></li>
+            <li><a href=""><i class="glyphicon glyphicon-circle-arrow-up"></i> 视 维 云</a></li>
+        </ul>
+    </div>
+<div class="container">
+    <nav class="navbar navbar-default " style="background:white;">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1" aria-expanded="false" aria-controls="navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="">
+                <img src="images/logo.png" class="img-responsive" alt="Responsive image" width="220" height="53">
+            </a>
+        </div>
+        <br>
+        <div id="navbar1"  class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="admin.html">首页</a></li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">视维产品</a>
+                    <ul class="dropdown-menu" >
+                        <li><a href="" title="二代全景相机">二代全景相机</a></li>
+                        <li><a href="" title="视维云相机">视维云相机</a></li>
+                        <li><a href="" title="视维VR眼镜">视维VR眼镜</a></li>
+                    </ul>
+                </li>
+                <li><a href="swx.html">视维学堂</a></li>
+                <li><a href="khd.html">客户端下载</a></li>
+                <li><a href="">视维云工厂</a></li>
+                <li class="dropdown"><a href="jdal.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">经典案例</a>
+                    <ul class="dropdown-menu" >
+                        <li><a href="jdal.html" title="酒店">酒店</a></li>
+                        <li><a href="jdal.html" title="样板间">样板间</a></li>
+                        <li><a href="jdal.html" title="门店">门店</a></li>
+                        <li><a href="jdal.html" title="景区">景区</a></li>
+                        <li><a href="jdal.html" title="效果图全景">效果图全景</a></li>
+                        <li><a href="jdal.html" title="施工工艺">施工工艺</a></li>
+                        <li><a href="jdal.html" title="办公场所">办公场所</a></li>
+                        <li><a href="jdal.html" title="会所">会所</a></li>
+                        <li><a href="jdal.html" title="其他">航拍</a></li>
+                        <li><a href="jdal.html" title="航拍">学校</a></li>
+                        <li><a href="jdal.html" title="学校">其他</a></li>
+                    </ul>
+                </li>
+            </ul></div></nav>
+</div>
+</div>
+</nav>
+<script>
+    $('li.dropdown').mouseover(function() {
+        $(this).addClass('open');    }).mouseout(function() {        $(this).removeClass('open');    });
+</script>
+<!--/头部结束-->
+<!--@-->
+
+<div id="banner">
+    <div class="DB_tab25">
+        <ul class="DB_bgSet">
+
+            <li style="background: url(images/bj1.jpg) center center no-repeat; display: none;    background-size: cover;"></li>
+            <li style="background: url()center center no-repeat; display: list-item;    background-size: cover;"></li>
+            <!--<li style="background:url(templates/default/newWeb/images/fbh.jpg) no-repeat 100% 100%; background-position:center"></li>-->
+            <li style="background: url(images/banner1.jpg) center center no-repeat; display: none;    background-size: cover;"></li>
+            <li style="background: url(images/banner2.png) center center no-repeat; display: none;    background-size: cover;"></li>
+        </ul>
+
+        <ul class="DB_imgSet" style="position: relative;">
+            <li style="position: absolute; display: none;">
+                <img class="DB_1_1" width="620" src="images/qrcode.png" alt="" style="left: 260px; opacity: 1; display: block; top: 180px;">
+                <img class="DB_1_2" width="160" src="images/camera.png" alt="" style="left: 80px; opacity: 1; display: block; top: 80px;">
+            </li>
+
+            <li style="position: absolute; display: list-item;">
+                <a href=""> <img class="DB_4_1" src="images/title.png" alt="" style="opacity: 1; display: block; left: 340px; top: 40px;"> </a>
+                <a href=""><img class="DB_4_2" src="images/hd.png" alt="" style="opacity: 1; display: block; left: 420px; top: 80px;"> </a>
+                <a href=""> <img class="DB_4_3" src="images/41.png" alt="" style="left: 60px; opacity: 1; display: block; top: 80px;"> </a>
+                <a href=""> <img class="DB_4_4" src="images/k.png" alt="" style="opacity: 1; display: block; left: 620px; top: 80px;"> </a>
+                <a href=""><img class="DB_4_5" src="images/camera(1).png" alt="" style="top: 270px; opacity: 1; display: block; left: 420px;"> </a>
+                <a href=""> <img class="DB_4_6" src="images/x4.png" alt="" style="left: 435px; opacity: 1; display: block; top: 160px;"> </a>
+                <a href=""><img id="moreBtn" class="DB_4_7" width="95" src="images/more_btn_normal.png" alt="" style="left: 440px; opacity: 1; display: block; top: 120px;"> </a>
+            </li>
+
+            <li style="position: absolute; display: none;"></li>
+
+            <li style="position: absolute; display: none;"></li>
+        </ul>
+
+        <div class="DB_menuWrap">
+            <ul class="DB_menuSet">
+                <li class=""><img src="images/btn_off.png" alt=""></li>
+                <li class="select"><img src="images/btn_on.png" alt=""></li>
+                <li class=""><img src="images/btn_off.png" alt=""></li>
+                <li class=""><img src="images/btn_off.png" alt=""></li>
+            </ul>
+            <div class="DB_next" style="display: none;"><img src="images/nextArrow.png" alt="NEXT"></div>
+            <div class="DB_prev" style="display: none;"><img src="images/prevArrow.png" alt="PREV"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('.DB_tab25').DB_tabMotionBanner({
+            key:'b28551',
+            autoRollingTime:10000,
+            bgSpeed:500,
+            motion:{
+                DB_1_1:{left:-50,opacity:0,speed:1000,delay:500},
+                DB_1_2:{left:-50,opacity:0,speed:1000,delay:1000},
+                DB_1_3:{left:100,opacity:0,speed:1000,delay:1500},
+                DB_2_1:{top:50,opacity:0,speed:1000,delay:500},
+                DB_2_2:{top:50,opacity:0,speed:1000,delay:1000},
+                DB_2_3:{top:100,opacity:0,speed:1000,delay:1500},
+
+                DB_4_11:{left:-50,opacity:0,speed:1000,delay:500},
+                DB_4_22:{left:-50,opacity:0,speed:1000,delay:1000},
+
+                DB_4_1:{bottom:400,opacity:0,speed:800,delay:500},
+                DB_4_2:{bottom:300,opacity:0,speed:1000,delay:500},
+                DB_4_3:{left:300,opacity:0,speed:1000,delay:500},
+                DB_4_4:{right:600,opacity:0,speed:1100,delay:1000},
+                DB_4_5:{top:420,opacity:0,speed:1400,delay:500},
+                DB_4_6:{left:-50,opacity:0,speed:1000,delay:1000},
+                DB_4_7:{left:-50,opacity:0,speed:1800,delay:900},
+                end:null
+            }
+        })
+
+        $("#moreBtn").mouseover(function(){
+            $(this).attr('src','http://cdn.thumb.svrvr.com/public/images/silde/more_btn.png');
+        })
+
+        $("#moreBtn").mouseout(function(){
+            $(this).attr('src','http://cdn.thumb.svrvr.com/public/images/silde/more_btn_normal.png');
+        })
+
+    </script>
+</div>
+<!--@-->
+<div class="container-fluid" id="lunbo" >
+    <div id="myCarousel" class="carousel slide">
+        <!-- 轮播（Carousel）项目 -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="images/banner1.jpg" class="img-responsive"  alt="First slide">
+                <div class="carousel-caption"></div>
+            </div>
+            <div class="item">
+                <img src="images/banner2.png" class="img-responsive"  alt="Second slide">
+                <div class="carousel-caption"></div>
+            </div>
+            <div class="item">
+                <img src="images/banner3.jpg" class="img-responsive"  alt="Third slide">
+                <div class="carousel-caption"></div>
+            </div>
+        </div>
+        <!-- 轮播（Carousel）导航 -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev" style="opacity: 0;"></a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next" style="opacity: 0;"></a>
+    </div>
+    <div class="container"></div>
+</div>
+
+<!-- 轮播结束-->
+<!-- 公告-->
+<div class="container">
+    <div id="gonggao" class="text-center"><br>
+        <a href="#">
+            <span class="glyphicon glyphicon-volume-up">公告：</span>
+        </a><br><br>
+        <div class="toutiao">
+            <div class="swiper-container1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <p>迎中秋，庆国庆，视维豪礼大放送2015-09-24</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p>视维新品发布会运营商构建大会2015-11-21</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p>视维云VR全景相机新品发布会2016-11-01</p>
+                    </div>
+                </div>
+            </div>
+
+            <script >
+                // 滚动轮播
+                var mySwiper = new Swiper ('.swiper-container1', {
+                    loop: true,//循环
+                    pagination: '.swiper-pagination',
+                    autoplay: 1000,//自动滑动3s
+                    direction: 'vertical'//纵向
+                })
+            </script>
+            <!--商家滚动！  -->
+            <h3>他们正在使用视维云：</h3>
+            <div id="demo" class="container">
+                <div id="indemo">
+                    <div id="demo1">
+                        <a href="#"><img src="images/f1.png" border="0" /></a>
+                        <a href="#"><img src="images/f2.png" border="0" /></a>
+                        <a href="#"><img src="images/f5.png" border="0" /></a>
+                        <a href="#"><img src="images/f6.png" border="0" /></a>
+                        <a href="#"><img src="images/f4.png" border="0" /></a>
+                        <a href="#"><img src="images/f6.png" border="0" /></a>
+                        <a href="#"><img src="images/f2.png" border="0" /></a>
+                        <a href="#"><img src="images/f5.png" border="0" /></a>
+                        <a href="#"><img src="images/f6.png" border="0" /></a>
+                    </div>
+                    <div id="demo2">
+                    </div>
+                </div>
+            </div>
+            <script>
+                var speed=10;
+                var tab=document.getElementById("demo");
+                var tab1=document.getElementById("demo1");
+                var tab2=document.getElementById("demo2");
+                tab2.innerHTML=tab1.innerHTML;
+                function Marquee(){
+                    if(tab2.offsetWidth-tab.scrollLeft<=0)
+                        tab.scrollLeft-=tab1.offsetWidth
+                    else{
+                        tab.scrollLeft++;
+                    }
+                }
+                var MyMar=setInterval(Marquee,speed);
+                tab.onmouseover=function() {clearInterval(MyMar)};
+                tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
+            </script>
+            <!-- 主题内容摘要 -->
+            <br>
+            <div class="row">
+                <div class="col-xs-12 col-md-12"  >客服热线:4007-111-788 | 夜间紧急服务热线：155576767791</div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-xs-6 col-md-3"><img src="images/cloud.png" class="img-responsive" alt=""></div>
+                <div class="col-xs-6 col-md-3"><img src="images/ipad.png" class="img-responsive" alt=""></div>
+                <!-- Add the extra clearfix for only the required viewport -->
+                <div class="clearfix visible-xs-block"></div>
+                <br>
+                <div class="col-xs-6 col-md-3"><img src="images/em1.jpg" class="img-responsive" alt=""></div>
+                <div class="col-xs-6 col-md-3"><img src="images/em2.jpg" class="img-responsive" alt=""></div>
+            </div>
+            <!-- banner轮播图1-->
+            <div  id="myCarousel1" class="carousel slide" data-ride="carousel" data-interval="400">
+                <!-- 轮播（Carousel）项目 -->
+                <div class="carousel-inner" >
+                    <div class="item active" >
+                        <img class="center-block" src="images/pad.png" class="img-responsive" alt="" >
+                    </div>
+                    <div class="item">
+                        <img class="center-block" src="images/pc.png" class="img-responsive" alt="">
+                    </div>
+                    <div class="item">
+                        <img class="center-block" src="images/all.png" class="img-responsive" alt="">
+                    </div>
+                </div>
+                <!-- 轮播（Carousel）导航 -->
+            </div>
+            <!--解决途径！ -->
+            <div class="row">
+                <div class="col-md-12"><h2>解决途径</h2></div>
+                <img src="images/qqq.png" class="img-responsive" alt="Responsive image">
+            </div>
+            <!-- 应用场景！-->
+            <div class="row">
+                <div class="col-md-12"><h2>应用场景</h2></div>
+                <div class="col-md-12"><h6>房产行业、旅游酒店、家居设计师、摄影机构</h6></div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-xs-6 col-sm-3">
+                    <div class="b1">
+                        <img src="images/town.png" class="img-responsive">
+                        <h3>装企行业</h3>
+                    </div></div>
+                <div class="col-xs-6 col-sm-3">
+                    <div class="b1">
+                        <img src="images/home.png" class="img-responsive">
+                        <h3>房产中介</h3>
+                    </div>
+                </div>
+                <!-- Add the extra clearfix for only the required viewport -->
+                <div class="clearfix visible-xs-block"></div>
+                <div class="col-xs-6 col-sm-3">
+                    <div class="b1">
+                        <img src="images/pencil.png" class="img-responsive">
+                        <h3>家居中介</h3>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <div class="b1">
+                        <img src="images/door.png" class="img-responsive">
+                        <h3>建筑建材</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- 视维云优势-->
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>视维云优势</h2>
+                </div>
+                <div class="col-md-12">
+                    <h6>多终端实时同步、高速智能加载、互动性界面展示、多平台客户端、二维码传播、一键导航、一键分享、 一键拨打、产品细节、 场景语音、在线订单、不断创新，更多优势，敬请探索。</h6>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-xs-6 col-sm-3">
+                    <div class="b1">
+                        <img src="images/device.png" class="img-responsive">
+                        <h3>多终端实时同步</h3>
+                    </div></div>
+                <div class="col-xs-6 col-sm-3">
+                    <div class="b1">
+                        <img src="images/glass.png" class="img-responsive">
+                        <h3>产品细节</h3>
+                    </div>
+                </div>
+                <!-- Add the extra clearfix for only the required viewport -->
+                <div class="clearfix visible-xs-block"></div>
+                <div class="col-xs-6 col-sm-3">
+                    <div class="b1">
+                        <img src="images/wechat.png" class="img-responsive">
+                        <h3>一键分享</h3>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <div class="b1">
+                        <img src="images/down.png" class="img-responsive">
+                        <h3>离线下载</h3>
+                    </div>
+                </div>
+            </div>
+        </div></div></div>
+<!-- 底部-->
+
+<div id="foot" class="clearfix">
+    <div class="container">
+        <div class="col-xs-12 col-md-12" >
+            <li class="text-left">
+                <a href="admin.html">首页</a>|
+                <a href="swx.html">视维学堂</a>|
+                <a href="jdal.html">经典案例</a>|
+                <a href="khd.html">客户端下载</a>|
+                <a href="">产品介绍</a>|
+                <a href="">视维云</a>
+            </li>
+        </div>
+        <div class="col-xs-12 col-md-12">
+            <h3 style="color: #d58512">4007-111-788 </h3>
+            <h5 style="color: #9d9d9d">客服专线：15557676779   客服QQ：1098878833 1078567733 1438898877 1811794073 QQ群：20397450</h5>
+            <h5 style="color: #9d9d9d">地址：浙江省台州市椒江区中心大道1088号   Copyright © 视维科技 All Rights Reserved. 浙ICP备13034979号 </h5>
+        </div></div>
+</div>
+
+
+</body>
+</html>
