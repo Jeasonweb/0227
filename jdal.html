@@ -93,6 +93,8 @@
                     </li>
                 </ul></div></nav>
     </div>
+	
+
 </div>
 </nav>
 <script>
@@ -790,7 +792,7 @@
                             </div>
                             <div class="clearfix visible-xs-block"></div>
                             <!-- 第十排-->
-                            <div class="row">
+                            <div class="row" id="lastRow">
                                 <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
                                     <div class="w">
 					    <div class="x">
@@ -3037,7 +3039,7 @@
                         </div>
                         <div class="clearfix visible-xs-block"></div>
                         <!-- 第十排-->
-                        <div class="row">
+                        <div class="row" id="lastRow">
                             <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
                                 <div class="w">
 					    <div class="x">
@@ -3117,6 +3119,8 @@
         </div>
     </div>
 </div>
+
+<div class="btn btn-default" style="width: 100%;" id="loadMoreBtn">加载更多</div>
 <!--底部 -->
 <div id="foot" class="clearfix" style="">
     <div class="container">
@@ -3140,3 +3144,34 @@
 </body>
 
 </html>
+<script type="text/javascript">
+	$('#loadMoreBtn').on('click',function(){
+		
+		//在此请求数据 
+		
+		var JsonDataArr=[{'goodNum':'100','viewNum':'700','imgUrl':'images/j4-1.jpg','barcodeImgUrl':'images/2m.png','shopName':'昊公馆 精品酒店'}];
+		if(!JsonDataArr.length){
+			$(this).html('已经全部加载完成').attr('disabled',true);
+			return;
+		}
+		var tempStr='';
+		
+		for(var i=0;i<JsonDataArr.length;i++){
+			var selectedShop=JsonDataArr[i];
+			tempStr+='<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3"> <div class="w"><div class="x">'+
+ 					'<div class="tf"><div class="good"><a href="#">'+selectedShop.goodNum
+ 					+'</a></div><div class="view"><a href="#">'+selectedShop.viewNum
+ 					+'</a></div></div><span class="fa fa-weixin"><a href="#"><img src="'+selectedShop.imgUrl
+ 					+'" class="img-responsive" alt="'+selectedShop.shopName
+ 					+'"></a><div class="s" id="s1"> <img src="'+selectedShop.barcodeImgUrl
+ 					+'" class="img-responsive"></div><div class="caption"><p class="text-center">'+selectedShop.shopName
+ 					+'</p></div></span></div></div></div>';
+		}		
+		$('#lastRow').append(tempStr);
+		//需要特殊判断的注意如果一次加载10个
+		/*if(sonDataArr.length<10){
+			$(this).html('已经全部加载完成').attr('disabled',true);
+		}	*/	
+		
+	})
+</script>
