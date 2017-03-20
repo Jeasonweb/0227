@@ -3145,22 +3145,53 @@
 
 </html>
 <script type="text/javascript">
+	var index=1;
 	$('#loadMoreBtn').on('click',function(){
-		/*http://api.svrvr.com/index.php/Api/Pano/showpanolist/PageSize/10/catid/10?callback=jQuery18303308071480542647_1489987404393&_=1489987405687*/
 		//在此请求数据
-		var tempUrl='http://api.svrvr.com/index.php/Api/Pano/showpanolist/PageSize/10/catid/10';
+		$.ajax({
+			type:"get",
+			url:'http://api.svrvr.com/index.php/Api/Pano/showpanolist/PageSize/10/catid/'+ index+'',
+			async:true,
+			success:function(response){
+				console.info(response.data);
+				return;
+				var jsonDataArr=jsonData.data.pano;
+				if(!JsonDataArr.length){
+			$(this).html('已经全部加载完成').attr('disabled',true);
+					return;
+				}
+				var tempStr='';
+				
+				for(var i=0;i<JsonDataArr.length;i++){
+					var selectedShop=JsonDataArr[i];
+					tempStr+='<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3"> <div class="w"><div class="x">'+
+		 					'<div class="tf"><div class="good"><a href="#">'+selectedShop.good
+		 					+'</a></div><div class="view"><a href="#">'+selectedShop.id
+		 					+'</a></div></div><span class="fa fa-weixin"><a href="#"><img src="'+selectedShop.thumb
+		 					+'" class="img-responsive" alt="'+decodeURIComponent(selectedShop.title)
+		 					+'"></a><div class="s" id="s1"> <img src="'+'http://www.gbtags.com/gb/qrcode?t=http://www.baidu.com&s=120'
+		 					+'" class="img-responsive"></div><div class="caption"><p class="text-center" style="text-overflow: ellipsis;overflow: hidden;height:35px;">'+decodeURIComponent(selectedShop.title)
+		 					+'</p></div></span></div></div></div>';
+				}		
+				$('#lastRow').append(tempStr);
+			},
+			error:function(){
+				
+			}
+		});
+		/*var tempUrl='http://api.svrvr.com/index.php/Api/Pano/showpanolist/PageSize/10/catid/'+ index++ +'?callback=myResult';
 		var dataStr='';
 		var temScript=document.createElement('script');
 		temScript.src=tempUrl;
-		$('body').append(temScript);
+		$('body').append(temScript);*/
 		/*postDataFromClient(tempUrl,dataStr,function(jsonData){
 			alert(JSON.stringify(jsonData));
 		},function(){
 			alert('请求出错');
 		});*/
 		
-		
-		/*var JsonDataArr=[{'goodNum':'100','viewNum':'700','imgUrl':'images/j4-1.jpg','barcodeImgUrl':'images/2m.png','shopName':'昊公馆 精品酒店'}];
+		var jsonData={"result":"ok","data":{"pano":[{"id":"43305","catid":"0","title":"\u6a2a\u5e97\u56fd\u5f1f\u82b1\u5c97\u5ca9\u2014\u5357\u6c5f\u58f9\u53f7\u6548\u679c\u56fe","thumb":"http:\/\/cdn.thumb.svrvr.com\/thumb\/2017\/02\/u8722\/scene\/43305\/20170228130554272_900_450.jpg_l","addtime":"1488258327","good":"15","is_open":"2","link":"http:\/\/i.svrvr.com\/?a=wap_view&id=q43305"},{"id":"30529","catid":"0","title":"\u4fdd\u96c6\u5916\u6ee927-110\u5ba4\u4f55\u8001\u5e08\u4e2d\u5f0f\u5168\u666f\u6548\u679c\u56fe \u8bbe\u8ba1\u70ed\u7ebf\uff1a15957922015","thumb":"http:\/\/www.svrvr.com\/upload\/user\/2016\/08\/u6071\/scene\/30529\/20161002175755705_600_300.jpg","addtime":"1475402217","good":"13","is_open":"2","link":"http:\/\/i.svrvr.com\/?a=wap_view&id=h30529"},{"id":"26977","catid":"0","title":"\u6ee8\u6cb3\u9f99\u97f58-2-202\u590f\u5973\u58eb\uff08\u7b80\u6b27\u98ce\u683c\uff09\u5168\u666f\u6548\u679c\u56fe\u8d4f\u6790","thumb":"http:\/\/www.svrvr.com\/upload\/user\/2016\/03\/u3370\/scene\/26977\/20160823203516199_300_150.jpg","addtime":"1471952200","good":"13","is_open":"2","link":"http:\/\/i.svrvr.com\/?a=wap_view&id=r26977"},{"id":"26549","catid":"0","title":"\u300a\u5929\u6210\u540d\u84571-4-1602\u85cf\u5148\u751f\u96c5\u5c45\uff08\u73b0\u4ee3\u7b80\u7ea6\u98ce\u683c\u300b\u5168\u666f\u6548\u679c\u56fe\u8d4f\u6790","thumb":"http:\/\/www.svrvr.com\/upload\/user\/2016\/03\/u3370\/scene\/26549\/20160819130253290_300_150.jpg","addtime":"1471582914","good":"11","is_open":"2","link":"http:\/\/i.svrvr.com\/?a=wap_view&id=g26549"},{"id":"25710","catid":"0","title":"\u5c0f\u5e05\u7684VR\u6d4b\u8bd5\u6548\u679c\u56fe","thumb":"http:\/\/www.svrvr.com\/upload\/user\/2015\/12\/u2860\/scene\/25710\/20160809175754538_300_150.jpg","addtime":"1470736633","good":"11","is_open":"2","link":"http:\/\/i.svrvr.com\/?a=wap_view&id=x25710"},{"id":"23830","catid":"0","title":"\u5927\u5b85\u5370\u8c61\u300a\u5929\u6210\u660e\u6708\u6d32\u897f\u533a6-2-2001\u6768\u5148\u751f\u96c5\u5c45\uff08\u6b27\u5f0f\u98ce\u683c\uff09\u300b\u5168\u666f\u6548\u679c\u56fe\u8d4f\u6790","thumb":"http:\/\/www.svrvr.com\/upload\/user\/2016\/03\/u3370\/scene\/23830\/20160718171108983_300_150.jpg","addtime":"1468828691","good":"16","is_open":"2","link":"http:\/\/i.svrvr.com\/?a=wap_view&id=q23830"},{"id":"22430","catid":"0","title":"\u5927\u5b85\u5370\u8c61\u88c5\u9970\u300a\u9890\u548c\u5e84\u56edB7-2-801\uff08\u4e2d\u5f0f\u98ce\u683c\uff09\u300b\u5168\u666f\u6548\u679c\u56fe\u8d4f\u6790","thumb":"http:\/\/www.svrvr.com\/upload\/user\/2016\/03\/u3370\/scene\/22430\/20160630105221853_300_150.jpg","addtime":"1467253241","good":"46","is_open":"2","link":"http:\/\/i.svrvr.com\/?a=wap_view&id=v22430"},{"id":"22376","catid":"0","title":"\u4e0a\u6d77\u9662\u5b50305\u53f7 720\u5168\u666f\u6548\u679c\u56fe","thumb":"http:\/\/www.svrvr.com\/upload\/user\/2016\/01\/u2951\/scene\/22376\/20160629152359690_300_150.jpg","addtime":"1467182799","good":"31","is_open":"2","link":"http:\/\/i.svrvr.com\/?a=wap_view&id=t22376"},{"id":"21803","catid":"0","title":"\u5927\u5b85\u5370\u8c61\u300a\u5929\u6210\u660e\u6708\u6d326-1-2901 \u300b \u5168\u666f\u6548\u679c\u56fe\u8d4f\u6790","thumb":"http:\/\/www.svrvr.com\/upload\/user\/2016\/03\/u3370\/scene\/21803\/20160621143017183_300_150.jpg","addtime":"1466490566","good":"15","is_open":"2","link":"http:\/\/i.svrvr.com\/?a=wap_view&id=s21803"},{"id":"21715","catid":"0","title":"\u300a\u5929\u6210\u540d\u845711-2-702\u5f20\u5148\u751f\u96c5\u5c45\uff08\u65b0\u4e2d\u5f0f\u98ce\u683c\uff09\u300b \u5168\u666f\u6548\u679c\u56fe\u8d4f\u6790","thumb":"http:\/\/www.svrvr.com\/upload\/user\/2016\/03\/u3370\/scene\/21715\/20160620101823814_300_150.jpg","addtime":"1466389084","good":"12","is_open":"2","link":"http:\/\/i.svrvr.com\/?a=wap_view&id=h21715"}],"pageCount":3,"sum":"27"}};
+		var JsonDataArr=jsonData.data.pano;
 		if(!JsonDataArr.length){
 			$(this).html('已经全部加载完成').attr('disabled',true);
 			return;
@@ -3170,15 +3201,15 @@
 		for(var i=0;i<JsonDataArr.length;i++){
 			var selectedShop=JsonDataArr[i];
 			tempStr+='<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3"> <div class="w"><div class="x">'+
- 					'<div class="tf"><div class="good"><a href="#">'+selectedShop.goodNum
- 					+'</a></div><div class="view"><a href="#">'+selectedShop.viewNum
- 					+'</a></div></div><span class="fa fa-weixin"><a href="#"><img src="'+selectedShop.imgUrl
- 					+'" class="img-responsive" alt="'+selectedShop.shopName
- 					+'"></a><div class="s" id="s1"> <img src="'+selectedShop.barcodeImgUrl
- 					+'" class="img-responsive"></div><div class="caption"><p class="text-center">'+selectedShop.shopName
+ 					'<div class="tf"><div class="good"><a href="#">'+selectedShop.good
+ 					+'</a></div><div class="view"><a href="#">'+selectedShop.id
+ 					+'</a></div></div><span class="fa fa-weixin"><a href="#"><img src="'+selectedShop.thumb
+ 					+'" class="img-responsive" alt="'+decodeURIComponent(selectedShop.title)
+ 					+'"></a><div class="s" id="s1"> <img src="'+'http://www.gbtags.com/gb/qrcode?t=http://www.baidu.com&s=120'
+ 					+'" class="img-responsive"></div><div class="caption"><p class="text-center" style="text-overflow: ellipsis;overflow: hidden;height:35px;">'+decodeURIComponent(selectedShop.title)
  					+'</p></div></span></div></div></div>';
 		}		
-		$('#lastRow').append(tempStr);*/
+		$('#lastRow').append(tempStr);
 		//需要特殊判断的注意如果一次加载10个
 		/*if(sonDataArr.length<10){
 			$(this).html('已经全部加载完成').attr('disabled',true);
@@ -3186,7 +3217,7 @@
 		
 	})
 	
-	function myResult(jsonData){
-		alert(jsonData);
-	}
+	/*function myResult(jsonData){
+		alert(JSON.stringify(jsonData));
+	}*/
 </script>
