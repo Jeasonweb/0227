@@ -3146,10 +3146,21 @@
 </html>
 <script type="text/javascript">
 	$('#loadMoreBtn').on('click',function(){
+		/*http://api.svrvr.com/index.php/Api/Pano/showpanolist/PageSize/10/catid/10?callback=jQuery18303308071480542647_1489987404393&_=1489987405687*/
+		//在此请求数据
+		var tempUrl='http://api.svrvr.com/index.php/Api/Pano/showpanolist/PageSize/10/catid/10';
+		var dataStr='';
+		var temScript=document.createElement('script');
+		temScript.src=tempUrl;
+		$('body').append(temScript);
+		/*postDataFromClient(tempUrl,dataStr,function(jsonData){
+			alert(JSON.stringify(jsonData));
+		},function(){
+			alert('请求出错');
+		});*/
 		
-		//在此请求数据 
 		
-		var JsonDataArr=[{'goodNum':'100','viewNum':'700','imgUrl':'images/j4-1.jpg','barcodeImgUrl':'images/2m.png','shopName':'昊公馆 精品酒店'}];
+		/*var JsonDataArr=[{'goodNum':'100','viewNum':'700','imgUrl':'images/j4-1.jpg','barcodeImgUrl':'images/2m.png','shopName':'昊公馆 精品酒店'}];
 		if(!JsonDataArr.length){
 			$(this).html('已经全部加载完成').attr('disabled',true);
 			return;
@@ -3167,11 +3178,15 @@
  					+'" class="img-responsive"></div><div class="caption"><p class="text-center">'+selectedShop.shopName
  					+'</p></div></span></div></div></div>';
 		}		
-		$('#lastRow').append(tempStr);
+		$('#lastRow').append(tempStr);*/
 		//需要特殊判断的注意如果一次加载10个
 		/*if(sonDataArr.length<10){
 			$(this).html('已经全部加载完成').attr('disabled',true);
 		}	*/	
 		
 	})
+	
+	function myResult(jsonData){
+		alert(jsonData);
+	}
 </script>
