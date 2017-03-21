@@ -37,7 +37,13 @@
             border-bottom:3px solid #0088CC;
             background: #eee;
         }
-
+		@media (min-width: 1200px){
+			.col-lg-3 {
+		    width: 25%;
+		    min-height: 180px;
+			}
+		}
+		
     </style>
 </head>
 <body>
@@ -108,17 +114,17 @@
     <div role="tabpanel">
         <!-- Nav tabs -->
         <ul id="d1" class="nav nav-tabs" role="tablist" >
-            <li role="presentation" class="active"><a href="#panel-1" aria-controls="panel-1" role="tab" data-toggle="tab">酒店</a></li>
-            <li role="presentation" class=""><a href="#panel-2" aria-controls="panel-2" role="tab" data-toggle="tab">样品房</a></li>
-            <li role="presentation" class=""><a href="#panel-3" aria-controls="panel-3" role="tab" data-toggle="tab">门店</a></li>
-            <li role="presentation" class=""><a href="#panel-4" aria-controls="panel-4" role="tab" data-toggle="tab">景区</a></li>
-            <li role="presentation" class=""><a href="#panel-1" aria-controls="panel-1" role="tab" data-toggle="tab">效果图全景</a></li>
-            <li role="presentation" class=""><a href="#panel-2" aria-controls="panel-2" role="tab" data-toggle="tab">施工工艺</a></li>
-            <li role="presentation" class=""><a href="#panel-3" aria-controls="panel-3" role="tab" data-toggle="tab">办公场所</a></li>
-            <li role="presentation" class=""><a href="#panel-4" aria-controls="panel-4" role="tab" data-toggle="tab">会所</a></li>
-            <li role="presentation" class=""><a href="#panel-1" aria-controls="panel-1" role="tab" data-toggle="tab">航拍</a></li>
-            <li role="presentation" class=""><a href="#panel-2" aria-controls="panel-2" role="tab" data-toggle="tab">学校</a></li>
-            <li role="presentation" class=""><a href="#panel-3" aria-controls="panel-3" role="tab" data-toggle="tab">其他</a></li>
+            <li role="presentation" class="active" data-value='6'><a href="#panel-1" aria-controls="panel-1" role="tab" data-toggle="tab" >酒店</a></li>
+            <li role="presentation" class="" data-value='7'><a href="#panel-2" aria-controls="panel-2" role="tab" data-toggle="tab" >样品房</a></li>
+            <li role="presentation" class="" data-value='9'><a href="#panel-3" aria-controls="panel-3" role="tab" data-toggle="tab" >门店</a></li>
+            <li role="presentation" class="" data-value='10'><a href="#panel-4" aria-controls="panel-4" role="tab" data-toggle="tab" >景区</a></li>
+            <li role="presentation" class="" data-value='11'><a href="#panel-1" aria-controls="panel-1" role="tab" data-toggle="tab" >效果图全景</a></li>
+            <li role="presentation" class="" data-value='12'><a href="#panel-2" aria-controls="panel-2" role="tab" data-toggle="tab" >施工工艺</a></li>
+            <li role="presentation" class="" data-value='13'><a href="#panel-3" aria-controls="panel-3" role="tab" data-toggle="tab" >办公场所</a></li>
+            <li role="presentation" class="" data-value='15'><a href="#panel-4" aria-controls="panel-4" role="tab" data-toggle="tab" >会所</a></li>
+            <li role="presentation" class="" data-value='29'><a href="#panel-1" aria-controls="panel-1" role="tab" data-toggle="tab" >航拍</a></li>
+            <li role="presentation" class="" data-value='28'><a href="#panel-2" aria-controls="panel-2" role="tab" data-toggle="tab" >学校</a></li>
+            <li role="presentation" class="" data-value='14'><a href="#panel-3" aria-controls="panel-3" role="tab" data-toggle="tab" >其他</a></li>
         </ul>
         <br>
         <!-- Tab 酒店 col-xs-6 col-sm-3 col-md-3 col-lg-3 -->
@@ -3145,27 +3151,28 @@
 
 </html>
 <script type="text/javascript">
-	var index=1;
+	var pageIndex=1;
+	$(document).ready(function(){
+		
+		var catid = $('#d1 li.active').attr('data-value');		
+		postDataFromClient(pageIndex,catid,getListsSuccess,getListsFailure);	
+		
+	});
 	$('#loadMoreBtn').on('click',function(){
 		//在此请求数据
-		/*var tempScript=document.createElement('script');
-		tempScript.src='http://api.svrvr.com/index.php/Api/Pano/showpanolist/PageSize/10/catid/'+ i++;
-		$('body').append(tempScript);*/
-		$.ajax({
-			type:"get",
-			url:'http://api.svrvr.com/index.php/Api/Pano/showpanolist/page/2/PageSize/10/catid/'+index++,
-			async:true,
-			success:function(jsonData){
-				jsonData=JSON.parse(jsonData);
-				
-				if(jsonData.result=='ok'){
+		pageIndex++;
+		var catid = $('#d1 li.active').attr('data-value');
+		postDataFromClient(pageIndex,catid,getListsSuccess,getListsFailure);
+		
+	})
+	function getListsSuccess(jsonData){
+		if(jsonData.result=='ok'){
 					var JsonDataArr=jsonData.data.pano;
 					if(!JsonDataArr.length){
-						$(this).html('已经全部加载完成').attr('disabled',true);
+						$('#loadMoreBtn').html('已经全部加载完成').attr('disabled',true);
 						return;
 					}
 					var tempStr='';
-		
 					for(var i=0;i<JsonDataArr.length;i++){
 						var selectedShop=JsonDataArr[i];
 						tempStr+='<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3"> <div class="w"><div class="x">'+
@@ -3176,22 +3183,40 @@
 			 					+'"></a><div class="s" id="s1"> <img src="'+'http://www.gbtags.com/gb/qrcode?t=http://www.baidu.com&s=120'
 			 					+'" class="img-responsive"></div><div class="caption"><p class="text-center" style="text-overflow: ellipsis;overflow: hidden;height:35px;">'+decodeURIComponent(selectedShop.title)
 			 					+'</p></div></span></div></div></div>';
-					}		
-					$('#lastRow').append(tempStr);
-					if(JsonDataArr.length<10){
+					}
+					if(pageIndex==1){
+						$('#lastRow').html(tempStr);
+					}else{
+						$('#lastRow').append(tempStr);
+					}					
+					if(JsonDataArr.length<20){
 						$(this).html('已经全部加载完成').attr('disabled',true);
 					}
-					
-				}else{
-					alert('请求参数出错');
-					
 				}
-				/*alert('进入成功函数');*/
-			},
-			fail:function(){
-				alert('进入失败函数');
-			}
-		});
-		
+	}
+	function getListsFailure(){
+		alert('网络出错');
+	}
+	$('#d1').on('click','li',function(){
+		var tempCatid= $('#d1 li.active').attr('data-value');
+		$(this).addClass('active').siblings().removeClass('active');
+		var catid= $('#d1 li.active').attr('data-value');
+		if(tempCatid!=catid){
+			$('#loadMoreBtn').html('加载更多').attr('disabled',false);
+			pageIndex=1;
+			postDataFromClient(pageIndex,catid,getListsSuccess,getListsFailure);			
+		}
 	})
+	//从服务器端获取数据
+	function postDataFromClient(method, params, successFunction, failFunction) {
+	    $.ajax({
+	        type: "get",
+	        url: 'common.php',
+	        data:{"Method":method,"Params":params},
+	        async: true,
+	        dataType: "json",
+	        error: failFunction,
+	        success: successFunction
+	    })
+	}
 </script>
