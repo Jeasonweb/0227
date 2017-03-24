@@ -3211,8 +3211,7 @@
 	function postDataFromClient(method, params, successFunction, failFunction) {
 	    $.ajax({
 	        type: "get",
-	        url: 'common.php',
-	        data:{"Method":method,"Params":params},
+	        url: 'http://api.svrvr.com/index.php/Api/Pano/showpanolist/page/'+method+'/PageSize/10/catid/'+params,
 	        async: true,
 	        dataType: "json",
 	        error: failFunction,
