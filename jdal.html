@@ -51,10 +51,10 @@
 		    left: 50%;
 		    z-index: 100;
 		    background: rgba(0,0,0,0.3);
-		    width: 6rem;
-		    height: 6rem;
-		    margin-left: -3rem;
-		    margin-top: -3rem;
+		    width: 8rem;
+		    height: 8rem;
+		    margin-left: -4rem;
+		    margin-top: -4.5rem;
 		}
 		.pull_icon{
 			width: 25px;
@@ -169,12 +169,7 @@
 	                        </div>
 	                </div>
 	            </div>
-	            <!-- Tab 酒店结束 -->
-	
-	            
-	
-	          
-	           
+	            <!-- Tab 酒店结束 -->     
 	        </div>
 	    </div>
 	</div>
@@ -260,7 +255,8 @@
 		if(tempCatid!=catid){
 			$('#loadMoreBtn').html('加载更多').attr('disabled',false);
 			pageIndex=1;
-			postDataFromClient(pageIndex,catid,getListsSuccess,getListsFailure);			
+			postDataFromClient(pageIndex,catid,getListsSuccess,getListsFailure);
+			myscroll=new iScroll('wrapper');			
 		}
 	})
 	//从服务器端获取数据
@@ -307,14 +303,11 @@
 			pageIndex++;
 			var catid = $('#d1 li.active').attr('data-value');		
 			postDataFromClient(pageIndex,catid,getListsSuccess,getListsFailure);
-			$('.more').toggle();
+			$('.more').hide();
 		}
 		if ($('.scroller').height()<$('#wrapper').height()) {
 			$('.more').hide();
 			myscroll.destroy();
 		}
-
-
-
 
 </script>
